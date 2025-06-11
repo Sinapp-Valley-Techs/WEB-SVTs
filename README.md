@@ -1,54 +1,82 @@
-# React + TypeScript + Vite
+# Sinapp Valley Techs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Innovación que transforma tu negocio.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Sobre Nosotros
 
-## Expanding the ESLint configuration
+Sinapp Valley Techs es una agencia de inteligencia artificial dedicada a conectar personas y procesos con IA a través de experiencias y productividad. Creemos que la tecnología no solo debe asistir, sino también potenciar la vida de las personas en todos los niveles.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Misión
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Creamos arquitectura de software, agentes, aplicaciones y páginas web que integran IA para generar conexiones más significativas y optimizar el tiempo de nuestros usuarios. Automatizamos empresas y organizaciones, creando soluciones personalizadas que mejoran eficiencia y experiencia del cliente.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Visión
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Convertirnos en líderes mundiales en la creación de valor a través de IA, impulsando personas y empresas hacia un futuro más eficiente, personalizado y humano.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Valores
+
+- 💜 Empatía: Primero las personas, porque somos personas.
+- 🧠 Consciencia: Razonamos de lo general a lo particular y viceversa, consideramos causa-efecto.
+- ⚡ Adaptabilidad: Nos ajustamos y evolucionamos para aprovechar cada oportunidad del entorno.
+
+---
+
+## Servicios
+
+- **Agentes virtuales con personalidad propia**: Agentes conversacionales en WhatsApp para gestionar recordatorios, pendientes, finanzas y rutinas.
+- **Agentes virtuales**: Adaptados a usuarios individuales o negocios, con una personalidad ligera, funcional y amigable.
+- **Automatización inteligente de procesos para empresas**: Diseño de sistemas automáticos con IA para negocios y organizaciones.
+- **Contenido visual generado con IA**: Entrenamiento de modelos únicos para mantener consistencia estética.
+- **Contenido audiovisual generado con IA**: Desarrollo futuro de videos realistas con IA (avatars, deepfakes controlados, narrativas interactivas).
+- **Producción y edición**: Producción y edición con herramientas como CapCut, HeyGen y Runway.
+
+---
+
+## Nuestro Equipo
+
+- **Victor Hernandez**: CEO & Fundador. Líder visionario y apasionado por la innovación tecnológica.
+- **Christian Arteaga**: Desarrollador Python. Especialista en backend y automatización de procesos.
+- **Josue Valverde**: Desarrollador Python. Experto en desarrollo de aplicaciones y sistemas inteligentes.
+- **Angel Castro**: Desarrollador Python. Especialista en integración de IA y automatización.
+- **Josue Belmont**: AI Engineer. Desarrollador de soluciones de inteligencia artificial y ML.
+
+---
+
+## Agents
+
+### Val Bussiness
+
+Tu asistente ejecutiva en WhatsApp. Organiza pendientes, agenda recordatorios y gestiona tu día a día con lenguaje natural y respuestas rápidas.
+
+---
+
+## Noticias
+
+- Lanzamiento de nuestra nueva plataforma de gestión empresarial.
+- Participación en el evento Tech Innovators 2025.
+- Reconocimiento como empresa líder en transformación digital.
+
+---
+
+## Preguntas Frecuentes (FAQ)
+
+- **¿Qué servicios ofrecen?** Consultoría, desarrollo de software, transformación digital y soporte.
+- **¿Trabajan con empresas pequeñas?** Sí, ayudamos a empresas de todos los tamaños.
+- **¿Dónde están ubicados?** Operamos de forma remota y atendemos clientes en todo el mundo.
+
+---
+
+## Contacto
+
+- **Correo:** [SinappValleyTechs@gmail.com](mailto:SinappValleyTechs@gmail.com)
+- **Teléfono:** +52 55 52 17 32 92
+- **Facebook:** [Sinapp Valley Techs](https://www.facebook.com/profile.php?id=100068276588366)
+- **Twitter/X:** [@SinappValley](https://x.com/SinappValley)
+- **Instagram:** [Sinapp Valley Techs](https://instagram.com)
+
+---
+
+© 2025 Sinapp Valley Techs. Todos los derechos reservados.
