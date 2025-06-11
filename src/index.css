@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html, #root {
+  height: 100%;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--svt-bg-light);
+}
+
+:root {
+  --svt-bg-light: #f8fafc; /* blanco perlado, similar a bg-gray-50 */
+  --svt-bg-dark: #18181b;  /* negro no tan intenso, similar a bg-neutral-950 */
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: transparent;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.dark body, html.dark #root {
+  background-color: var(--svt-bg-dark);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@keyframes train-slide-infinite {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-train-slide {
+  animation: train-slide-infinite 32s linear infinite;
+  will-change: transform;
+}
+
+/* Animaciones CSS para el splash loader */
+@keyframes fade-in {
+  0% { opacity: 0; transform: scale(0.96); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes fade-in-slow {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes app-fade-in {
+  0% { opacity: 0; transform: translateY(24px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.animate-fade-in {
+  animation: fade-in 0.7s cubic-bezier(0.4,0,0.2,1) both;
+}
+.animate-fade-in-slow {
+  animation: fade-in-slow 1.2s 0.5s both;
+}
+.animate-app-fade-in {
+  animation: app-fade-in 0.7s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+/* Duplicar el contenido para efecto infinito */
