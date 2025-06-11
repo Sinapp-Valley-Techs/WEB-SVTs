@@ -162,7 +162,7 @@ function App() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.7 }}
               >
-                Innovación que transforma tu negocio.
+                Innovamos con inteligencia, transformamos con propósito.
               </motion.h2>
               <button
                 onClick={e => {
