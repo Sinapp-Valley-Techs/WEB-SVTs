@@ -447,7 +447,7 @@ function App() {
                 <div className="flex gap-6 md:gap-4 text-3xl md:text-2xl">
                   <motion.a href="https://www.facebook.com/profile.php?id=100068276588366" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition" whileHover={{ scale: 1.2, rotate: -8 }} whileTap={{ scale: 0.95 }}><FaFacebook /></motion.a>
                   <motion.a href="https://x.com/SinappValley" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition" whileHover={{ scale: 1.2, rotate: 8 }} whileTap={{ scale: 0.95 }}><FaTwitter /></motion.a>
-                  <motion.a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition" whileHover={{ scale: 1.2, rotate: 8 }} whileTap={{ scale: 0.95 }}><FaInstagram /></motion.a>
+                  <motion.a href="https://www.instagram.com/sinappvalley?igsh=MWZqcjRubjZyeDNmYg==" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition" whileHover={{ scale: 1.2, rotate: 8 }} whileTap={{ scale: 0.95 }}><FaInstagram /></motion.a>
                 </div>
               </div>
             </div>
