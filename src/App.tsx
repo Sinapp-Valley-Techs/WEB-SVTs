@@ -1,70 +1,94 @@
 import "./App.css";
 import React, { useState } from "react";
-import { FaLaptopCode, FaServer, FaLightbulb, FaRobot, FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaPhoneAlt, FaImage, FaVideo, FaUserAstronaut, FaComments, FaCogs, FaTools } from "react-icons/fa";
+import { FaLaptopCode, FaServer, FaLightbulb, FaRobot, FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaPhoneAlt, FaImage, FaVideo, FaUserAstronaut, FaComments, FaCogs, FaTools, FaBars, FaTimes } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 
 function Navbar() {
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    sectionId: string
+  ) => {
     e.preventDefault();
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    setMenuOpen(false); // Cerrar menú en móvil después de hacer clic
   };
 
+  const navItems = [
+    { id: 'inicio', label: 'Inicio' },
+    { id: 'nosotros', label: 'Nosotros' },
+    { id: 'servicios', label: 'Servicios' },
+    { id: 'agents', label: 'Agents' },
+    { id: 'noticias', label: 'Noticias' },
+    { id: 'faq', label: 'FAQ' },
+    { id: 'footer-contacto', label: 'Contacto' },
+  ];
+
   return (
-    <nav className="fixed top-0 left-0 w-full px-6 py-4 flex justify-between items-center shadow z-20 transition-colors duration-300 bg-white/80 text-blue-900 border-b border-gray-200 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 w-full px-6 py-4 flex justify-between items-center shadow z-20 bg-white/80 text-blue-900 border-b border-gray-200 backdrop-blur-md">
+      {/* Logo */}
       <div className="flex items-center gap-3">
         <img
           src="/imagenes/Logo Sinapp Valley Techs.jpg"
           alt="Logo Sinapp Valley Techs"
-          className="w-10 h-10 rounded-full object-cover border-2 shadow-sm transition-all duration-300 bg-white border-blue-700"
+          className="w-10 h-10 rounded-full object-cover border-2 shadow-sm bg-white border-blue-700"
         />
         <span className="font-bold text-xl tracking-wide select-none">Sinapp Valley Techs</span>
       </div>
-      <ul className="flex gap-6 items-center">
-        {[
-          { id: 'inicio', label: 'Inicio' },
-          { id: 'nosotros', label: 'Nosotros' },
-          { id: 'servicios', label: 'Servicios' },
-          { id: 'agents', label: 'Agents' },
-          { id: 'noticias', label: 'Noticias' },
-          { id: 'faq', label: 'FAQ' },
-          { id: 'footer-contacto', label: 'Contacto' },
-        ].map((item) => (
+
+      {/* Botón hamburguesa (solo en móvil) */}
+      <div
+        className="md:hidden text-2xl cursor-pointer"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+      >
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      {/* Menú en pantallas grandes */}
+      <ul className="hidden md:flex gap-6 items-center">
+        {navItems.map((item) => (
           <li key={item.id}>
             <a
               href="#"
-              className={`relative px-3 py-1 rounded-md font-medium transition-colors duration-200
-                group
-                hover:bg-blue-50
-                hover:text-purple-700
-                focus:outline-none focus:ring-2 focus:ring-blue-300`}
-              onClick={e => handleNavClick(e, item.id)}
+              className="relative px-3 py-1 rounded-md font-medium transition-colors duration-200 group hover:bg-blue-50 hover:text-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+              onClick={(e) => handleNavClick(e, item.id)}
             >
-              <span className="transition-colors duration-200 group-hover:text-purple-700 group-focus:text-purple-700">
+              <span className="group-hover:text-purple-700 group-focus:text-purple-700">
                 {item.label}
               </span>
-              {/* Línea animada debajo */}
-              <span className={`absolute left-1/2 -bottom-1 w-0 h-0.5 rounded-full transition-all duration-300
-                bg-gradient-to-r from-blue-500 to-purple-400
-                group-hover:w-2/3 group-focus:w-2/3 group-hover:h-1 group-focus:h-1 group-hover:opacity-80 group-focus:opacity-80 opacity-0`}
-                style={{transform: 'translateX(-50%)'}}
-              ></span>
-              {/* Borde minimalista animado */}
-              <span className={`absolute inset-0 pointer-events-none rounded-md transition-all duration-200
-                group-hover:ring-2 group-hover:ring-blue-400 group-hover:ring-opacity-40
-                group-focus:ring-2 group-focus:ring-blue-400 group-focus:ring-opacity-60`}></span>
+              <span className="absolute left-1/2 -bottom-1 w-0 h-0.5 rounded-full transition-all duration-300 bg-gradient-to-r from-blue-500 to-purple-400 group-hover:w-2/3 group-focus:w-2/3 group-hover:h-1 group-focus:h-1 group-hover:opacity-80 group-focus:opacity-80 opacity-0" style={{ transform: 'translateX(-50%)' }}></span>
+              <span className="absolute inset-0 pointer-events-none rounded-md transition-all duration-200 group-hover:ring-2 group-hover:ring-blue-400 group-hover:ring-opacity-40 group-focus:ring-2 group-focus:ring-blue-400 group-focus:ring-opacity-60"></span>
             </a>
           </li>
         ))}
       </ul>
+
+      {/* Menú desplegable en móvil */}
+      {menuOpen && (
+        <ul className="absolute top-full left-0 w-full bg-white shadow-md py-4 flex flex-col items-center gap-4 md:hidden z-10">
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <a
+                href="#"
+                className="text-blue-900 font-medium hover:text-purple-700"
+                onClick={(e) => handleNavClick(e, item.id)}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 }
 
 function App() {
-  const [showFooterContact, setShowFooterContact] = useState(false);
   const [loading, setLoading] = useState(true);
   const [showApp, setShowApp] = useState(false);
 
@@ -140,7 +164,6 @@ function App() {
               <button
                 onClick={e => {
                   e.preventDefault();
-                  setShowFooterContact((prev) => !prev);
                   setTimeout(() => {
                     const section = document.getElementById('footer-contacto');
                     if (section) {
@@ -395,33 +418,41 @@ function App() {
               </ul>
             </motion.section>
           </main>
-          <footer className={
-            `w-screen left-1/2 right-1/2 -translate-x-1/2 bg-neutral-900 text-white text-center py-8 mt-8 shadow-inner flex flex-col items-center gap-4`
-          } id="footer-contacto" style={{borderRadius: 0, boxShadow: 'none', position: 'relative'}}>
-            <div className={`flex flex-col md:flex-row md:justify-between w-full max-w-4xl px-4 gap-6 md:gap-0 transition-all duration-300 ${showFooterContact ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden md:max-h-[1000px] md:opacity-100 md:overflow-visible'}`}>
-              <div className="flex-1 flex flex-col items-center md:items-start">
-                <span className="font-bold text-xl text-blue-400 mb-2">Contacto</span>
-                <div className="flex flex-col gap-1 text-sm text-gray-200">
-                  <span className="flex items-center gap-2"><FaEnvelope className="text-purple-400" /> SinappValleyTechs@gmail.com</span>
-                  <span className="flex items-center gap-2"><FaPhoneAlt className="text-blue-400" /> +52 55 52 17 32 92</span>
+          <footer
+            className={`w-full left-1/2 right-1/2 -translate-x-1/2 bg-neutral-900 text-white text-center py-8 mt-8 shadow-inner flex flex-col items-center gap-6 md:gap-4`}
+            id="footer-contacto"
+            style={{ borderRadius: 0, boxShadow: 'none', position: 'relative' }}
+          >
+            {/* Bloque de contacto/redes: siempre visible en mobile y desktop */}
+            <div
+              className={
+                'w-full max-w-4xl px-4 flex flex-col md:flex-row md:justify-between gap-8 md:gap-0'
+              }
+            >
+              <div className="flex-1 flex flex-col items-center md:items-start mb-6 md:mb-0">
+                <span className="font-bold text-2xl md:text-xl text-blue-400 mb-2">Contacto</span>
+                <div className="flex flex-col gap-2 text-base md:text-sm text-gray-200">
+                  <span className="flex items-center gap-2"><FaEnvelope className="text-purple-400 text-xl md:text-base" /> SinappValleyTechs@gmail.com</span>
+                  <span className="flex items-center gap-2"><FaPhoneAlt className="text-blue-400 text-xl md:text-base" /> +52 55 52 17 32 92</span>
                 </div>
               </div>
-              <div className="flex-1 flex flex-col items-center md:items-end mt-6 md:mt-0">
-                <span className="font-bold text-xl text-purple-400 mb-2">Redes Sociales</span>
-                <div className="flex gap-4 text-2xl">
+              <div className="flex-1 flex flex-col items-center md:items-end mt-0 md:mt-0">
+                <span className="font-bold text-2xl md:text-xl text-purple-400 mb-2">Redes Sociales</span>
+                <div className="flex gap-6 md:gap-4 text-3xl md:text-2xl">
                   <motion.a href="https://www.facebook.com/profile.php?id=100068276588366" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition" whileHover={{ scale: 1.2, rotate: -8 }} whileTap={{ scale: 0.95 }}><FaFacebook /></motion.a>
                   <motion.a href="https://x.com/SinappValley" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition" whileHover={{ scale: 1.2, rotate: 8 }} whileTap={{ scale: 0.95 }}><FaTwitter /></motion.a>
                   <motion.a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition" whileHover={{ scale: 1.2, rotate: 8 }} whileTap={{ scale: 0.95 }}><FaInstagram /></motion.a>
                 </div>
               </div>
             </div>
-            <div className="w-full border-t border-gray-700 mt-6 pt-4 text-xs text-gray-400 flex flex-col items-center gap-2">
-              <div className="flex flex-wrap gap-4 justify-center items-center">
+            {/* Políticas y copyright: siempre visible */}
+            <div className="w-full border-t border-gray-700 mt-8 pt-6 text-xs md:text-xs text-gray-400 flex flex-col items-center gap-3 md:gap-2 px-2">
+              <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center w-full">
                 <a href="#" className="hover:underline hover:text-blue-300 transition">Políticas de privacidad</a>
-                <span className="mx-2">/</span>
+                <span className="hidden md:inline mx-2">/</span>
                 <a href="#" className="hover:underline hover:text-blue-300 transition">Aviso legal</a>
               </div>
-              <span>
+              <span className="block text-center w-full">
                 © {new Date().getFullYear()} Sinapp Valley Techs. Todos los derechos reservados.
               </span>
             </div>
