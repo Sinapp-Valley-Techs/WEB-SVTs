@@ -514,24 +514,6 @@ function AnimatedBar({ label, value, max, color, icon }: { label: string; value:
   );
 }
 
-// AnimatedTitle: animación de letras para el título
-function AnimatedTitle({ text }: { text: string }) {
-  return (
-    <span className="inline-block">
-      {[...text].map((char, i) => (
-        <motion.span
-          key={i}
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.05 * i, duration: 0.4 }}
-          className="inline-block"
-        >
-          {char === ' ' ? '\u00A0' : char}
-        </motion.span>
-      ))}
-    </span>
-  );
-}
 
 // ParallaxImage: fondo decorativo con efecto parallax sutil
 function ParallaxImage() {
