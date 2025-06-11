@@ -38,7 +38,9 @@ function Navbar() {
           className="w-10 h-10 rounded-full object-cover border-2 shadow-sm bg-white border-blue-700"
         />
         <span className="font-bold text-xl tracking-wide select-none leading-tight whitespace-nowrap">
-          Sinapp Valley Techs
+          {/* Desktop: una sola línea, móvil: salto de línea */}
+          <span className="hidden md:inline">Sinapp Valley Techs</span>
+          <span className="inline md:hidden">Sinapp Valley<br />Techs</span>
         </span>
       </div>
 
@@ -153,8 +155,9 @@ function App() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
               >
-                <span className="block whitespace-nowrap">Sinapp Valley</span>
-                <span className="block whitespace-nowrap">Techs</span>
+                {/* Desktop: una línea, Mobile: dos líneas */}
+                <span className="hidden md:inline">Sinapp Valley Techs</span>
+                <span className="inline md:hidden">Sinapp Valley<br />Techs</span>
               </motion.h1>
               <motion.h2
                 className="text-2xl md:text-3xl font-semibold text-purple-700 mb-4 text-center italic"
