@@ -37,7 +37,9 @@ function Navbar() {
           alt="Logo Sinapp Valley Techs"
           className="w-10 h-10 rounded-full object-cover border-2 shadow-sm bg-white border-blue-700"
         />
-        <span className="font-bold text-xl tracking-wide select-none">Sinapp Valley Techs</span>
+        <span className="font-bold text-xl tracking-wide select-none leading-tight whitespace-nowrap">
+          Sinapp Valley Techs
+        </span>
       </div>
 
       {/* Botón hamburguesa (solo en móvil) */}
@@ -134,10 +136,10 @@ function App() {
     <>
       <Navbar />
       <div className={showApp ? 'animate-app-fade-in' : 'opacity-0'}>
-        <div className="relative flex flex-col min-h-screen overflow-x-hidden overflow-y-auto w-full bg-gray-50" style={{ boxShadow: 'none', borderLeft: 'none', borderRight: 'none' }}>
-          <main id="inicio" className="flex-1 flex flex-col items-center justify-center pt-24">
+        <div className="relative flex flex-col min-h-screen overflow-x-hidden overflow-y-auto w-full bg-gray-50" style={{ boxShadow: 'none', borderLeft: 'none', borderRight: 'none', maxWidth: '100vw', paddingLeft: 0, paddingRight: 0 }}>
+          <main id="inicio" className="flex-1 flex flex-col items-center justify-center pt-24 w-full px-0">
             {/* INICIO HERO CON PARALLAX Y TEXTO ANIMADO */}
-            <section className="relative w-full max-w-4xl flex flex-col items-center justify-center mb-8 bg-white/80 rounded-xl shadow-lg p-8 scroll-mt-24 overflow-hidden">
+            <section className="relative w-full flex flex-col items-center justify-center mb-8 bg-white/80 rounded-xl shadow-lg p-4 md:p-8 scroll-mt-24 overflow-hidden">
               {/* Fondo parallax sutil */}
               <div
                 className="absolute inset-0 -z-10 bg-gradient-to-tr from-blue-100 via-purple-100 to-white opacity-80 pointer-events-none"
@@ -146,12 +148,13 @@ function App() {
               {/* Imagen decorativa parallax */}
               <ParallaxImage />
               <motion.h1
-                className="text-5xl md:text-7xl font-extrabold text-blue-900 mb-2 text-center drop-shadow"
+                className="text-4xl md:text-7xl font-extrabold text-blue-900 mb-2 text-center drop-shadow leading-tight"
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
               >
-                <AnimatedTitle text="Sinapp Valley Techs" />
+                <span className="block whitespace-nowrap">Sinapp Valley</span>
+                <span className="block whitespace-nowrap">Techs</span>
               </motion.h1>
               <motion.h2
                 className="text-2xl md:text-3xl font-semibold text-purple-700 mb-4 text-center italic"
@@ -179,7 +182,7 @@ function App() {
             {/* NOSOTROS */}
             <motion.section
               id="nosotros"
-              className="w-full max-w-4xl bg-white/80 rounded-xl shadow-lg p-8 mb-8 scroll-mt-24"
+              className="w-full bg-white/80 rounded-xl shadow-lg p-4 md:p-8 mb-8 scroll-mt-24"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -228,7 +231,7 @@ function App() {
             {/* INTEGRANTES - Carrusel tipo tren */}
             <motion.section
               id="integrantes"
-              className="w-full max-w-4xl bg-white/80 rounded-xl shadow-lg p-8 mb-8 scroll-mt-24 overflow-hidden"
+              className="w-full bg-white/80 rounded-xl shadow-lg p-4 md:p-8 mb-8 scroll-mt-24 overflow-hidden"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -242,7 +245,7 @@ function App() {
             {/* SERVICIOS */}
             <motion.section
               id="servicios"
-              className="w-full max-w-4xl bg-white/80 rounded-xl shadow-lg p-8 mb-8 scroll-mt-24"
+              className="w-full bg-white/80 rounded-xl shadow-lg p-4 md:p-8 mb-8 scroll-mt-24"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -351,7 +354,7 @@ function App() {
             {/* AGENTS */}
             <motion.section
               id="agents"
-              className="w-full max-w-4xl bg-white/80 rounded-xl shadow-lg p-8 mb-8 scroll-mt-24"
+              className="w-full bg-white/80 rounded-xl shadow-lg p-4 md:p-8 mb-8 scroll-mt-24"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -388,7 +391,7 @@ function App() {
             {/* NOTICIAS */}
             <motion.section
               id="noticias"
-              className="w-full max-w-4xl bg-white/80 rounded-xl shadow-lg p-8 mb-8 scroll-mt-24"
+              className="w-full bg-white/80 rounded-xl shadow-lg p-4 md:p-8 mb-8 scroll-mt-24"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -404,7 +407,7 @@ function App() {
             {/* FAQ */}
             <motion.section
               id="faq"
-              className="w-full max-w-4xl bg-white/80 rounded-xl shadow-lg p-8 mb-8 scroll-mt-24"
+              className="w-full bg-white/80 rounded-xl shadow-lg p-4 md:p-8 mb-8 scroll-mt-24"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
