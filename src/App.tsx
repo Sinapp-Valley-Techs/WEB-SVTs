@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
-import { FaLaptopCode, FaMobileAlt, FaServer, FaLightbulb, FaRobot, FaCloud, FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaLaptopCode, FaMobileAlt, FaServer, FaLightbulb, FaRobot, FaCloud, FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaEnvelope, FaPhoneAlt, FaImage, FaVideo, FaUserAstronaut, FaComments, FaCogs, FaTools } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 
 function Navbar() {
@@ -15,9 +15,11 @@ function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full px-6 py-4 flex justify-between items-center shadow z-20 transition-colors duration-300 bg-white/80 text-blue-900 border-b border-gray-200 backdrop-blur-md">
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full flex items-center justify-center border-2 shadow-sm transition-all duration-300 bg-gradient-to-tr from-blue-700 to-purple-400 border-blue-700">
-          <span className="text-white font-bold text-lg">SVT</span>
-        </div>
+        <img
+          src="/imagenes/Logo Sinapp Valley Techs.jpg"
+          alt="Logo Sinapp Valley Techs"
+          className="w-10 h-10 rounded-full object-cover border-2 shadow-sm transition-all duration-300 bg-white border-blue-700"
+        />
         <span className="font-bold text-xl tracking-wide select-none">Sinapp Valley Techs</span>
       </div>
       <ul className="flex gap-6 items-center">
@@ -92,8 +94,12 @@ function App() {
   if (loading) {
     return (
       <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gray-50 transition-all duration-700 animate-fade-in">
-        <div className="w-24 h-24 rounded-full flex items-center justify-center bg-gradient-to-tr from-blue-700 to-purple-400 shadow-lg animate-pulse">
-          <span className="text-white font-extrabold text-4xl tracking-widest drop-shadow-lg">SVT</span>
+        <div className="w-24 h-24 rounded-full flex items-center justify-center bg-gradient-to-tr from-blue-700 to-purple-400 shadow-lg animate-pulse overflow-hidden">
+          <img
+            src="/imagenes/Logo Sinapp Valley Techs.jpg"
+            alt="Logo Sinapp Valley Techs"
+            className="w-20 h-20 object-cover rounded-full border-2 border-blue-700 shadow-md bg-white"
+          />
         </div>
         <span className="mt-6 text-2xl font-bold text-blue-900 animate-fade-in-slow">Sinapp Valley Techs</span>
       </div>
@@ -160,33 +166,31 @@ function App() {
               {/* Quiénes somos */}
               <div className="mb-6">
                 <h3 className="text-xl font-semibold text-purple-700 mb-2">¿Quiénes somos?</h3>
-                <p className="text-gray-700">Sinapp Valley Techs nació en 2021 con la visión de transformar la manera en que las empresas adoptan la tecnología. Desde nuestros inicios, hemos acompañado a organizaciones de todos los tamaños en su camino hacia la innovación digital, combinando experiencia, creatividad y cercanía.</p>
+                <p className="text-gray-700">Somos agencia de inteligencia artificial dedicada a conectar personas y procesos con IA a través de experiencias y productividad. Creemos que la tecnología no solo debe asistir, sino también potenciar la vida de las personas en todos los niveles.</p>
               </div>
               {/* Misión, Visión y Valores */}
               <div className="grid md:grid-cols-3 gap-6 mb-6">
                 <div className="bg-gray-100 rounded-lg p-4 shadow">
                   <h4 className="font-bold text-blue-900 mb-1">Misión</h4>
-                  <p className="text-gray-700 text-sm">Impulsar el crecimiento de nuestros clientes a través de soluciones tecnológicas innovadoras, personalizadas y de alto impacto.</p>
+                  <p className="text-gray-700 text-sm">Creamos arquitectura de software, agentes, aplicaciones y páginas web que integran IA para generar conexiones más significativas y optimizar el tiempo de nuestros usuarios, automatizamos empresas y organizaciones, creando soluciones personalizadas que mejoran eficiencia y experiencia del cliente.</p>
                 </div>
                 <div className="bg-gray-100 rounded-lg p-4 shadow">
                   <h4 className="font-bold text-blue-900 mb-1">Visión</h4>
-                  <p className="text-gray-700 text-sm">Ser referentes en innovación tecnológica y aliados estratégicos de empresas que buscan transformar su futuro digital.</p>
+                  <p className="text-gray-700 text-sm">Convertirnos en líderes mundiales en la creación de valor a través de IA, impulsando personas y empresas hacia un futuro más eficiente, personalizado y humano.</p>
                 </div>
                 <div className="bg-gray-100 rounded-lg p-4 shadow">
                   <h4 className="font-bold text-blue-900 mb-1">Valores</h4>
                   <ul className="list-disc list-inside text-gray-700 text-sm">
-                    <li>Innovación constante</li>
-                    <li>Compromiso con el cliente</li>
-                    <li>Transparencia y ética</li>
-                    <li>Trabajo en equipo</li>
-                    <li>Excelencia profesional</li>
+                    <li>💜 Empatía: Primero las personas, porque somos personas.</li>
+                    <li>🧠 Consciencia: Razonamos de lo general a lo particular y viceversa, consideramos causa- efecto.</li>
+                    <li>⚡ Adaptabilidad: Nos ajustamos y evolucionamos para aprovechar cada oportunidad del entorno.</li>
                   </ul>
                 </div>
               </div>
               {/* Enfoque */}
               <div>
                 <h3 className="text-xl font-semibold text-purple-700 mb-2">Nuestro Enfoque</h3>
-                <p className="text-gray-700">Nos distingue nuestra pasión por la innovación, la cercanía con cada cliente y la capacidad de adaptarnos a los retos de un mundo digital en constante cambio. Combinamos experiencia, creatividad y tecnología para ofrecer soluciones únicas y personalizadas.</p>
+                <p className="text-gray-700">Sinapp Valley Techs es el lugar donde la IA y la humanidad se encuentran para crear un presente más brillante, innovamos con inteligencia, transformamos con propósito.🚀✨</p>
               </div>
               {/* Estadísticas animadas debajo de Nuestro Enfoque */}
               <div className="w-full flex flex-wrap justify-center items-stretch gap-6 py-8 mb-2">
@@ -223,7 +227,7 @@ function App() {
             >
               <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Servicios</h2>
               <div className="grid md:grid-cols-3 gap-8 mb-8">
-                {/* Desarrollo de software a medida */}
+                {/* Agentes virtuales con personalidad propia */}
                 <div className="flex flex-col items-center bg-gray-50 rounded-lg p-6 shadow group hover:shadow-xl transition">
                   <motion.div
                     className="mb-3"
@@ -233,13 +237,13 @@ function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <FaLaptopCode className="w-10 h-10 text-blue-700 group-hover:text-blue-900 transition" />
+                    <FaUserAstronaut className="w-10 h-10 text-blue-700 group-hover:text-blue-900 transition" />
                   </motion.div>
-                  <h3 className="font-bold text-lg text-blue-900 mb-2">Desarrollo de software a medida</h3>
-                  <p className="text-gray-600 text-sm mb-4 text-center">Soluciones personalizadas para tu empresa, desde la idea hasta la implementación.</p>
+                  <h3 className="font-bold text-lg text-blue-900 mb-2">Agentes virtuales con personalidad propia</h3>
+                  <p className="text-gray-600 text-sm mb-4 text-center">Agentes conversacionales en WhatsApp para gestionar recordatorios, pendientes, finanzas y rutinas.</p>
                   <button className="mt-auto px-4 py-2 bg-blue-900 text-white rounded-lg shadow hover:bg-blue-800 transition text-sm">Solicitar demo</button>
                 </div>
-                {/* Aplicaciones móviles */}
+                {/* Agentes virtuales */}
                 <div className="flex flex-col items-center bg-gray-50 rounded-lg p-6 shadow group hover:shadow-xl transition">
                   <motion.div
                     className="mb-3"
@@ -249,13 +253,13 @@ function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
                   >
-                    <FaMobileAlt className="w-10 h-10 text-purple-600 group-hover:text-purple-800 transition" />
+                    <FaComments className="w-10 h-10 text-purple-600 group-hover:text-purple-800 transition" />
                   </motion.div>
-                  <h3 className="font-bold text-lg text-blue-900 mb-2">Aplicaciones móviles</h3>
-                  <p className="text-gray-600 text-sm mb-4 text-center">Desarrollo de apps nativas y multiplataforma para iOS y Android.</p>
+                  <h3 className="font-bold text-lg text-blue-900 mb-2">Agentes virtuales</h3>
+                  <p className="text-gray-600 text-sm mb-4 text-center">Adaptados a usuarios individuales o negocios, con una personalidad ligera, funcional y amigable.</p>
                   <button className="mt-auto px-4 py-2 bg-blue-900 text-white rounded-lg shadow hover:bg-blue-800 transition text-sm">Solicitar demo</button>
                 </div>
-                {/* Sistemas web y backend */}
+                {/* Automatización inteligente de procesos para empresas */}
                 <div className="flex flex-col items-center bg-gray-50 rounded-lg p-6 shadow group hover:shadow-xl transition">
                   <motion.div
                     className="mb-3"
@@ -265,13 +269,13 @@ function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                   >
-                    <FaServer className="w-10 h-10 text-blue-400 group-hover:text-blue-700 transition" />
+                    <FaCogs className="w-10 h-10 text-blue-400 group-hover:text-blue-700 transition" />
                   </motion.div>
-                  <h3 className="font-bold text-lg text-blue-900 mb-2">Sistemas web y backend</h3>
-                  <p className="text-gray-600 text-sm mb-4 text-center">Desarrollo de plataformas web, APIs, bases de datos y sistemas escalables.</p>
+                  <h3 className="font-bold text-lg text-blue-900 mb-2">Automatización inteligente de procesos para empresas</h3>
+                  <p className="text-gray-600 text-sm mb-4 text-center">Diseño de sistemas automáticos con IA para negocios y organizaciones.</p>
                   <button className="mt-auto px-4 py-2 bg-blue-900 text-white rounded-lg shadow hover:bg-blue-800 transition text-sm">Solicitar demo</button>
                 </div>
-                {/* Consultoría tecnológica */}
+                {/* Contenido visual generado con IA */}
                 <div className="flex flex-col items-center bg-gray-50 rounded-lg p-6 shadow group hover:shadow-xl transition">
                   <motion.div
                     className="mb-3"
@@ -281,13 +285,13 @@ function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                   >
-                    <FaLightbulb className="w-10 h-10 text-purple-400 group-hover:text-purple-700 transition" />
+                    <FaImage className="w-10 h-10 text-purple-400 group-hover:text-purple-700 transition" />
                   </motion.div>
-                  <h3 className="font-bold text-lg text-blue-900 mb-2">Consultoría tecnológica</h3>
-                  <p className="text-gray-600 text-sm mb-4 text-center">Acompañamiento experto para definir y ejecutar tu estrategia digital.</p>
+                  <h3 className="font-bold text-lg text-blue-900 mb-2">Contenido visual generado con IA</h3>
+                  <p className="text-gray-600 text-sm mb-4 text-center">Entrenamiento de modelos únicos con Astria, DreamBooth o similares para mantener consistencia estética.</p>
                   <button className="mt-auto px-4 py-2 bg-blue-900 text-white rounded-lg shadow hover:bg-blue-800 transition text-sm">Ver más</button>
                 </div>
-                {/* Integración IA / Automatización */}
+                {/* Contenido audiovisual generado con IA */}
                 <div className="flex flex-col items-center bg-gray-50 rounded-lg p-6 shadow group hover:shadow-xl transition">
                   <motion.div
                     className="mb-3"
@@ -297,13 +301,13 @@ function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                   >
-                    <FaRobot className="w-10 h-10 text-blue-500 group-hover:text-blue-800 transition" />
+                    <FaVideo className="w-10 h-10 text-blue-500 group-hover:text-blue-800 transition" />
                   </motion.div>
-                  <h3 className="font-bold text-lg text-blue-900 mb-2">IA, Automatización y ML</h3>
-                  <p className="text-gray-600 text-sm mb-4 text-center">Implementación de inteligencia artificial, automatización y machine learning en tus procesos.</p>
+                  <h3 className="font-bold text-lg text-blue-900 mb-2">Contenido audiovisual generado con IA</h3>
+                  <p className="text-gray-600 text-sm mb-4 text-center">Desarrollo futuro de videos realistas con IA (avatars, deepfakes controlados, narrativas interactivas).</p>
                   <button className="mt-auto px-4 py-2 bg-blue-900 text-white rounded-lg shadow hover:bg-blue-800 transition text-sm">Ver más</button>
                 </div>
-                {/* Infraestructura en la nube / DevOps */}
+                {/* Producción y edición */}
                 <div className="flex flex-col items-center bg-gray-50 rounded-lg p-6 shadow group hover:shadow-xl transition">
                   <motion.div
                     className="mb-3"
@@ -313,10 +317,10 @@ function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
                   >
-                    <FaCloud className="w-10 h-10 text-blue-300 group-hover:text-blue-600 transition" />
+                    <FaTools className="w-10 h-10 text-blue-300 group-hover:text-blue-600 transition" />
                   </motion.div>
-                  <h3 className="font-bold text-lg text-blue-900 mb-2">Nube y DevOps</h3>
-                  <p className="text-gray-600 text-sm mb-4 text-center">Infraestructura escalable, segura y automatizada en la nube.</p>
+                  <h3 className="font-bold text-lg text-blue-900 mb-2">Producción y edición</h3>
+                  <p className="text-gray-600 text-sm mb-4 text-center">Producción y edición con herramientas como CapCut, HeyGen y Runway.</p>
                   <button className="mt-auto px-4 py-2 bg-blue-900 text-white rounded-lg shadow hover:bg-blue-800 transition text-sm">Ver más</button>
                 </div>
               </div>
@@ -332,34 +336,25 @@ function App() {
             >
               <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Agents</h2>
               <div className="flex flex-col gap-8 mb-8">
-                {/* Agent 1 */}
+                {/* Val Bussiness */}
                 <div className="flex flex-col md:flex-row items-center bg-gray-50 rounded-lg p-6 shadow group hover:shadow-xl transition">
                   <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Valeria Bussiness" className="w-28 h-28 rounded-full object-cover mb-4 md:mb-0 md:mr-8 border-4 border-blue-200 shadow" />
                   <div className="flex-1 flex flex-col items-center md:items-start">
-                    <h3 className="font-bold text-2xl text-blue-900 mb-1">Valeria Bussiness</h3>
-                    <p className="text-gray-600 text-base mb-2 text-center md:text-left">Motor de innovación y soluciones empresariales en Sinapp Valley Techs.</p>
-                    <ul className="list-disc list-inside text-purple-700 text-sm mb-4 text-left">
-                      <li>Consultoría tecnológica</li>
-                      <li>Desarrollo de software</li>
-                      <li>Transformación digital</li>
-                      <li>Soporte y acompañamiento</li>
-                    </ul>
-                  </div>
-                  <div className="flex flex-col items-center justify-center w-full md:w-auto mt-4 md:mt-0">
-                    <button className="px-6 py-2 bg-purple-700 text-white rounded-lg shadow hover:bg-purple-800 transition text-base font-semibold">Pruebame</button>
-                  </div>
-                </div>
-                {/* Agent 2 Ejemplo */}
-                <div className="flex flex-col md:flex-row items-center bg-gray-50 rounded-lg p-6 shadow group hover:shadow-xl transition">
-                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Miguel AI" className="w-28 h-28 rounded-full object-cover mb-4 md:mb-0 md:mr-8 border-4 border-blue-200 shadow" />
-                  <div className="flex-1 flex flex-col items-center md:items-start">
-                    <h3 className="font-bold text-2xl text-blue-900 mb-1">Miguel AI</h3>
-                    <p className="text-gray-600 text-base mb-2 text-center md:text-left">Especialista en automatización y machine learning para empresas.</p>
-                    <ul className="list-disc list-inside text-purple-700 text-sm mb-4 text-left">
-                      <li>Automatización de procesos</li>
-                      <li>Integración de IA</li>
-                      <li>Optimización de recursos</li>
-                    </ul>
+                    <h3 className="font-bold text-2xl text-blue-900 mb-1">Val Bussiness</h3>
+                    <div className="text-gray-600 text-base mb-2 text-center md:text-left flex flex-col gap-2">
+                      <span>Conoce a <b>Val Business</b>, tu nueva agente inteligente personal disponible en WhatsApp.</span>
+                      <span>¿Mucho por hacer y poco tiempo para organizarlo? Val Business está aquí para rescatarte del caos. No es solo un bot… es una aliada eficiente y con estilo, diseñada para ayudarte a:</span>
+                      <ul className="list-disc list-inside ml-4 text-sm text-left">
+                        <li>✅ Crear y gestionar tu lista de pendientes</li>
+                        <li>⏰ Agendar recordatorios inteligentes que no se te olvidan</li>
+                        <li>📅 (Próximamente) Agendar citas por correo automático</li>
+                        <li>🔐 (Próximamente) Guardar tus contraseñas de forma segura</li>
+                        <li>💸 (Próximamente) Llevar tus finanzas personales sin estrés</li>
+                      </ul>
+                      <span>Todo desde WhatsApp, con lenguaje natural, respuestas rápidas y una actitud elegante, decidida y 100% business.</span>
+                      <span className="font-bold text-green-700">🆓 ¡El servicio es gratuito por tiempo limitado!</span>
+                      <span>Solo mándale un “Hola, Val” e inicia tu registro al número <b>📲 +52-55-5141-1321</b> y empieza a organizar tu vida como si tuvieras una asistente ejecutiva 24/7.</span>
+                    </div>
                   </div>
                   <div className="flex flex-col items-center justify-center w-full md:w-auto mt-4 md:mt-0">
                     <button className="px-6 py-2 bg-purple-700 text-white rounded-lg shadow hover:bg-purple-800 transition text-base font-semibold">Pruebame</button>
@@ -407,18 +402,15 @@ function App() {
               <div className="flex-1 flex flex-col items-center md:items-start">
                 <span className="font-bold text-xl text-blue-400 mb-2">Contacto</span>
                 <div className="flex flex-col gap-1 text-sm text-gray-200">
-                  <span className="flex items-center gap-2"><FaEnvelope className="text-purple-400" /> info@sinappvalleytechs.com</span>
-                  <span className="flex items-center gap-2"><FaEnvelope className="text-purple-400" /> valeria@sinappvalleytechs.com</span>
-                  <span className="flex items-center gap-2"><FaPhoneAlt className="text-blue-400" /> +52 55 1234 5678</span>
-                  <span className="flex items-center gap-2"><FaPhoneAlt className="text-blue-400" /> +52 55 8765 4321</span>
+                  <span className="flex items-center gap-2"><FaEnvelope className="text-purple-400" /> SinappValleyTechs@gmail.com</span>
+                  <span className="flex items-center gap-2"><FaPhoneAlt className="text-blue-400" /> +52 55 52 17 32 92</span>
                 </div>
               </div>
               <div className="flex-1 flex flex-col items-center md:items-end mt-6 md:mt-0">
                 <span className="font-bold text-xl text-purple-400 mb-2">Redes Sociales</span>
                 <div className="flex gap-4 text-2xl">
-                  <motion.a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition" whileHover={{ scale: 1.2, rotate: -8 }} whileTap={{ scale: 0.95 }}><FaFacebook /></motion.a>
-                  <motion.a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition" whileHover={{ scale: 1.2, rotate: 8 }} whileTap={{ scale: 0.95 }}><FaTwitter /></motion.a>
-                  <motion.a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition" whileHover={{ scale: 1.2, rotate: -8 }} whileTap={{ scale: 0.95 }}><FaLinkedin /></motion.a>
+                  <motion.a href="https://www.facebook.com/profile.php?id=100068276588366" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition" whileHover={{ scale: 1.2, rotate: -8 }} whileTap={{ scale: 0.95 }}><FaFacebook /></motion.a>
+                  <motion.a href="https://x.com/SinappValley" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition" whileHover={{ scale: 1.2, rotate: 8 }} whileTap={{ scale: 0.95 }}><FaTwitter /></motion.a>
                   <motion.a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition" whileHover={{ scale: 1.2, rotate: 8 }} whileTap={{ scale: 0.95 }}><FaInstagram /></motion.a>
                 </div>
               </div>
@@ -509,61 +501,44 @@ function AnimatedTitle({ text }: { text: string }) {
 
 // ParallaxImage: fondo decorativo con efecto parallax sutil
 function ParallaxImage() {
-  const [offset, setOffset] = React.useState(0);
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setOffset(window.scrollY * 0.15);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  return (
-    <motion.img
-      src="/vite.svg"
-      alt="Decorativo Parallax"
-      className="absolute right-0 bottom-0 w-48 md:w-64 opacity-30 pointer-events-none select-none"
-      style={{ transform: `translateY(${offset}px)` }}
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 0.3, y: 0 }}
-      transition={{ duration: 1.2, delay: 0.5 }}
-    />
-  );
+  // Imagen deshabilitada temporalmente
+  return null;
 }
 
 // Nuevo componente para carrusel infinito automático
 function InfiniteTrainCarousel() {
   const integrantes = [
     {
-      img: "https://randomuser.me/api/portraits/men/45.jpg",
-      nombre: "Juan Pérez",
+      img: "imagenes/img_vic.jpg",
+      nombre: "Victor Hernandez",
       rol: "CEO & Fundador",
       desc: "Líder visionario y apasionado por la innovación tecnológica.",
       border: "border-blue-200"
     },
     {
-      img: "https://randomuser.me/api/portraits/women/46.jpg",
-      nombre: "Ana Gómez",
-      rol: "CTO",
-      desc: "Especialista en desarrollo de software y arquitecturas cloud.",
-      border: "border-purple-200"
-    },
-    {
-      img: "https://randomuser.me/api/portraits/men/47.jpg",
-      nombre: "Carlos Ruiz",
-      rol: "Lead DevOps",
-      desc: "Experto en infraestructura, automatización y seguridad.",
+      img: "https://randomuser.me/api/portraits/men/46.jpg",
+      nombre: "Christian Arteaga",
+      rol: "Desarrollador Python",
+      desc: "Especialista en backend y automatización de procesos.",
       border: "border-blue-200"
     },
     {
-      img: "https://randomuser.me/api/portraits/women/47.jpg",
-      nombre: "Lucía Torres",
-      rol: "UX/UI Designer",
-      desc: "Diseñadora creativa enfocada en experiencia de usuario.",
-      border: "border-purple-200"
+      img: "https://randomuser.me/api/portraits/men/47.jpg",
+      nombre: "Josue Valverde",
+      rol: "Desarrollador Python",
+      desc: "Experto en desarrollo de aplicaciones y sistemas inteligentes.",
+      border: "border-blue-200"
     },
     {
       img: "https://randomuser.me/api/portraits/men/48.jpg",
-      nombre: "Miguel López",
+      nombre: "Angel Castro",
+      rol: "Desarrollador Python",
+      desc: "Especialista en integración de IA y automatización.",
+      border: "border-blue-200"
+    },
+    {
+      img: "https://randomuser.me/api/portraits/men/49.jpg",
+      nombre: "Josue Belmont",
       rol: "AI Engineer",
       desc: "Desarrollador de soluciones de inteligencia artificial y ML.",
       border: "border-blue-200"
