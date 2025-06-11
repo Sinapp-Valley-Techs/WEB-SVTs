@@ -40,7 +40,7 @@ function Navbar() {
         <span className="font-bold text-xl tracking-wide select-none leading-tight whitespace-nowrap">
           {/* Desktop: una sola línea, móvil: salto de línea */}
           <span className="hidden md:inline">Sinapp Valley Techs</span>
-          <span className="inline md:hidden">Sinapp Valley<br />Techs</span>
+          <span className="inline md:hidden">S.V.T.s</span>
         </span>
       </div>
 
