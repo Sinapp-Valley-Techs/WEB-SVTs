@@ -365,9 +365,9 @@ function App() {
             >
               <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Agents</h2>
               <div className="flex flex-col gap-8 mb-8">
-                {/* Val Bussiness */}
+                {/* Val Business */}
                 <div className="flex flex-col md:flex-row items-center bg-gray-50 rounded-lg p-6 shadow group hover:shadow-xl transition">
-                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Valeria Bussiness" className="w-28 h-28 rounded-full object-cover mb-4 md:mb-0 md:mr-8 border-4 border-blue-200 shadow" />
+                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Valeria Business" className="w-28 h-28 rounded-full object-cover mb-4 md:mb-0 md:mr-8 border-4 border-blue-200 shadow" />
                   <div className="flex-1 flex flex-col items-center md:items-start">
                     <h3 className="font-bold text-2xl text-blue-900 mb-1">Val Bussiness</h3>
                     <div className="text-gray-600 text-base mb-2 text-center md:text-left flex flex-col gap-2">
