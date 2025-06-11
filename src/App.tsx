@@ -386,7 +386,7 @@ function App() {
                     </div>
                   </div>
                   <div className="flex flex-col items-center justify-center w-full md:w-auto mt-4 md:mt-0">
-                    <button className="px-6 py-2 bg-purple-700 text-white rounded-lg shadow hover:bg-purple-800 transition text-base font-semibold">Pruebame</button>
+                    <button className="px-6 py-2 bg-purple-700 text-white rounded-lg shadow hover:bg-purple-800 transition text-base font-semibold">Pruébame</button>
                   </div>
                 </div>
               </div>
