@@ -1,0 +1,31 @@
+WEB-SVTs/
+│
+├── public/
+│   ├── vite.svg
+│   └── imagenes/
+│       ├── img_vic.jpg
+│       ├── Logo Sinapp Valley Techs.jpg
+│       └── Logo-Sinapp-Valley-Techs.svg
+│
+├── src/
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   ├── vite-env.d.ts
+│   └── assets/
+│       └── react.svg
+│
+├── COMPONENTES.md
+├── eslint.config.js
+├── estructura.txt
+├── index.html
+├── Informacion.md
+├── package.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
