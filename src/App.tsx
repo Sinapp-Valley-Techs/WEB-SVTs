@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
-import { FaLaptopCode, FaMobileAlt, FaServer, FaLightbulb, FaRobot, FaCloud, FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaEnvelope, FaPhoneAlt, FaImage, FaVideo, FaUserAstronaut, FaComments, FaCogs, FaTools } from "react-icons/fa";
+import { FaLaptopCode, FaServer, FaLightbulb, FaRobot, FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaPhoneAlt, FaImage, FaVideo, FaUserAstronaut, FaComments, FaCogs, FaTools } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 
 function Navbar() {
